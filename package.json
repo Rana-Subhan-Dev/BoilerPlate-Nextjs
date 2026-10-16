@@ -1,0 +1,55 @@
+{
+  "name": "boilerplate-nextjs",
+  "private": true,
+  "type": "module",
+  "version": "0.0.0",
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "scripts": {
+    "dev": "next dev --port 3000 -H 0.0.0.0",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint . --report-unused-disable-directives --max-warnings 0",
+    "test": "vitest",
+    "env": "cp -n .env.example .env",
+    "coverage": "vitest run --coverage",
+    "preinstall": "npx only-allow pnpm",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "vitest related --run"
+    ]
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.104.1",
+    "axios": "^1.20.0",
+    "next": "^16.4.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "styled-components": "^6.5.3",
+    "zustand": "^5.0.15"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@testing-library/dom": "^10.4.2",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
+    "@vitejs/plugin-react": "^6.1.2",
+    "@vitest/coverage-v8": "^5.0.3",
+    "eslint": "^9.39.0",
+    "eslint-config-next": "^16.4.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.6",
+    "husky": "^9.1.7",
+    "jest": "^30.5.2",
+    "jsdom": "^30.1.2",
+    "lint-staged": "^17.6.0",
+    "postcss": "^8.5.29",
+    "prettier": "^3.9.9",
+    "tailwindcss": "^4.3.3",
+    "vitest": "^5.0.3"
+  }
+}
